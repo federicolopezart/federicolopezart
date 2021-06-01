@@ -1,0 +1,78 @@
+<html>
+  <head>
+ <!-- A-Frame 0.8.* -->
+<script src="//aframe.io/releases/0.8.2/aframe.min.js"></script>
+
+
+
+<!-- A-Frame Extras -->
+<script src="//unpkg.com/aframe-extras@4.0.3/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+ 
+    <a-scene inspector-plugin-recast color="#000000">
+ <a-assets>
+      <a-asset-item id="museo" src="model.gltf"></a-asset-item>
+      <a-asset-item id="my-nav-mesh" src="navmesh.gltf"></a-asset-item>
+      <a-asset-item id="knife" src="KitchenKnife.gltf"></a-asset-item>
+      <a-asset-item id="totamato" src="NOVELO_TOMATO.gltf"></a-asset-item>
+      <a-asset-item id="frame" src="scene.gltf"></a-asset-item>
+      <img id="ground" src="wodeen.jpg">
+      <img id="groundN" src="wodeenN.jpg">
+      <img id="techo" src="techo.jpg">
+      <img id="techoN" src="techoN.jpg">
+    </a-assets>
+
+<!-- <a-entity movement-controls="speed: 0.15; constrainToNavMesh: true" position="">
+<a-camera camera="" position="0 1.6 0" rotation="" look-controls="pointerLockEnabled: true" wasd-controls="" data-aframe-inspector-original-camera=""></a-camera>
+</a-entity> -->
+
+<a-entity gltf-model="model.gltf" position="0 16.9 0" scale="5 5 5" src="#ground"></a-entity>
+<a-entity gltf-model="navmesh.gltf"  nav-mesh  visible="false"></a-entity>
+
+<a-entity> 
+<a-entity gltf-model="KitchenKnife.gltf" position="-0.17493 4.36137 -10.12728" scale="0.008 0.008 0.008" rotation="0 90 -15.010000000000002" visible=""></a-entity>
+<a-entity gltf-model="NOVELO_TOMATO.gltf" position="-0.57681 4.2961 -11.25235" scale="0.003 0.003 0.003" rotation="0 0 -15.010000000000002" visible="" ></a-entity>
+
+
+<!-- <a-animation attribute="scale""
+  dur="10000"
+  fill="forwards"
+  to="0 1 0"
+  repeat="indefinite"></a-animation> -->
+</a-entity>
+
+
+
+<a-entity gltf-model="scene.gltf" position="4.38651 4.14761 -11.72102" scale="0.03 0.03 0.03" rotation="" visible=""></a-entity>
+
+
+
+<a-entity geometry="primitive: plane; width: auto; height: auto;" material="color:black;  side: double;" text="value: \nNombre de la obra.\n\n Lorem Ipsum\n\n; width: 6; color: #eee; align: left; anchor: center; side: double; zOffset: 0.01" position="0 2 -11"></a-entity>
+
+
+
+<a-entity id="rig" movement-controls="speed: 0.15; constrainToNavMesh: true;">
+  <a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0"></a-entity>
+</a-entity>
+
+<!-- STAGE -->
+<a-entity>
+
+
+ 
+  <a-plane  src="#ground" normal-map="#groundN" repeat="20 20" material="color:#ffffff;" rotation="-90 0 0" scale="50 50 1" position="0 0.7 0" geometry=""></a-plane>  <!-- <a-grid position="0 5 0" material="side: double;"></a-grid> -->
+  <!-- <a-plane  src="#techo" normal-map="#techoN" repeat="20 20" material="color:#ffffff;" rotation="-90 180 0" scale="50 50 1" position="0 4 0" geometry=""></a-plane>  <a-grid position="0 5 0" material="side: double;"></a-grid> -->
+
+ 
+  <!-- <a-plane material="src:[object HTMLImageElement]" undefined"="" rotation="-90 0 0" scale="50 50 1" position="0 0.7 0" geometry=""></a-plane> 
+  <a-plane  material="repeat:49.99 1.06;color:#ffffff;src:wodeen.jpg" repeat="undefined" rotation="-90 0 0" scale="50 50 1" position="0 0.7 0" geometry=""></a-plane>-->
+  
+</a-entity>
+
+    </a-scene>
+
+
+
+  </body>
+</html>
