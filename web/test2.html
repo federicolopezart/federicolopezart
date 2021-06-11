@@ -1,11 +1,23 @@
 <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
 <body>
+  <a-assets>
+    <a-asset-item id="museo" src="model.gltf"></a-asset-item>
+    <a-asset-item id="my-nav-mesh" src="navmesh.gltf"></a-asset-item>
+    <a-asset-item id="knife" src="KitchenKnife.gltf"></a-asset-item>
+    <a-asset-item id="totamato" src="NOVELO_TOMATO.gltf"></a-asset-item>
+    <a-asset-item id="frame" src="scene.gltf"></a-asset-item>
+    <img id="ground" src="wodeen.jpg">
+    <img id="groundN" src="wodeenN.jpg">
+    <img id="techo" src="techo.jpg">
+    <img id="techoN" src="techoN.jpg">
+    <img id="autoJD" src="205.png"/>
+  </a-assets>
   <a-scene>
-    <a-box position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"
-             event-set__down="_event: mousedown; link:href: http://google.com;"
+    <a-image src="#autoJD" position="0 0 -4" width="4" height="4" 
+             event-set__down="_event: mousedown; link:href: tomates.html"
              event-set__up="_event: mouseup; material.wireframe: false"
-             event-set__leave="_event: mouseleave; material.wireframe: false"></a-plane>
+             event-set__leave="_event: mouseleave; material.wireframe: false"></a-image>
 
     <a-camera>
       <a-cursor></a-cursor>
