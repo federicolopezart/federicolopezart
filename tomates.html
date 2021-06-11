@@ -1,0 +1,170 @@
+<html>
+  <head>
+ <!-- A-Frame 0.8.* -->
+<script src="//aframe.io/releases/0.8.2/aframe.min.js"></script>
+
+
+
+<!-- A-Frame Extras -->
+<script src="//unpkg.com/aframe-extras@4.0.3/dist/aframe-extras.min.js"></script>
+<script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+
+
+
+  <title>MAFIZ Gallery</title>
+  <meta charset="utf-8"/>
+  <link rel="icon" href="../img/icon.png" type="image/gif">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165264218-1"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XJ4SPLSPZX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-XJ4SPLSPZX');
+</script>
+
+<script>
+
+  
+</script>
+
+  </head>
+  <body>
+ 
+    <a-scene inspector-plugin-recast color="#000000">
+ <a-assets>
+      <a-asset-item id="museo" src="model.gltf"></a-asset-item>
+      <a-asset-item id="my-nav-mesh" src="navmesh.gltf"></a-asset-item>
+      <a-asset-item id="knife" src="KitchenKnife.gltf"></a-asset-item>
+      <a-asset-item id="totamato" src="NOVELO_TOMATO.gltf"></a-asset-item>
+      <a-asset-item id="frame" src="scene.gltf"></a-asset-item>
+      <a-asset-item id="door" src="Door 2.gltf"></a-asset-item>
+      <img id="ground" src="wodeen.jpg">
+      <img id="groundN" src="wodeenN.jpg">
+      <img id="techo" src="techo.jpg">
+      <img id="techoN" src="techoN.jpg">
+      <img id="autoJD" src="205.png"/>
+      <img id="autoSS" src="206.png"/>
+      <img id="soup" src="207.png"/>
+    </a-assets>
+
+<!-- <a-entity movement-controls="speed: 0.15; constrainToNavMesh: true" position="">
+<a-camera camera="" position="0 1.6 0" rotation="" look-controls="pointerLockEnabled: true" wasd-controls="" data-aframe-inspector-original-camera=""></a-camera>
+</a-entity> -->
+
+
+
+ <a-image src="#autoJD" scale="3 3 1" position="3.884 4.225 -11.698" width="1" height="1"
+  event-set__down="_event: mousedown; link:href: https://www.youtube.com/watch?v=M300F3vrfjo;"
+  event-set__up="_event: mouseup; material.wireframe: false"
+  event-set__leave="_event: mouseleave; material.wireframe: false"></a-image>
+
+  <a-image src="#autoSS" scale="3 3 1" position="-5.068 4.248 -11.696" width="1" height="1"
+  event-set__down="_event: mousedown; link:href: https://youtu.be/aYwMXj5gJpM;"
+  event-set__up="_event: mouseup; material.wireframe: false"
+  event-set__leave="_event: mouseleave; material.wireframe: false"></a-image>
+ 
+
+  <a-image src="#soup" scale="3 3 1" position="7.451 4.248 -7.789" width="1" height="1" rotation="0 -90 0"></a-image>
+
+
+   <!-- <a-image src="#autoJD" position="0 0 -4" width="4" height="4" scale="3 3 1"
+            event-set__down="_event: mousedown; link:href: test2.html;"
+            event-set__up="_event: mouseup; material.wireframe: false"
+            event-set__leave="_event: mouseleave; material.wireframe: false"></a-image> -->
+
+ 
+<a-entity gltf-model="#door" position="9.96338 0.68736 -11.69222"  scale="0.02 0.02 0.02"  visible="" 
+event-set__down="_event: mousedown; link:href: https://www.federicolopez.art;"
+  event-set__up="_event: mouseup; material.wireframe: false"
+  event-set__leave="_event: mouseleave; material.wireframe: false"
+
+></a-entity>
+
+
+<a-entity gltf-model="model.gltf" position="0 16.9 0" scale="5 5 5" src="#ground"></a-entity>
+<a-entity gltf-model="navmesh.gltf"  nav-mesh  visible="false"></a-entity>
+
+<a-entity> 
+<a-entity gltf-model="KitchenKnife.gltf" position="-0.17493 4.36137 -10.12728" scale="0.008 0.008 0.008" rotation="0 90 -15.010000000000002" visible=""></a-entity>
+<a-entity gltf-model="NOVELO_TOMATO.gltf" position="-0.57681 4.2961 -11.25235" scale="0.003 0.003 0.003" rotation="0 0 -15.010000000000002" visible="" ></a-entity>
+
+
+<!-- <a-animation attribute="scale""
+  dur="10000"
+  fill="forwards"
+  to="0 1 0"
+  repeat="indefinite"></a-animation>
+
+<a-entity geometry="primitive: plane; width: auto; height: auto;" material="color:black;  side: double;" text="value: \nNombre de la obra.\n\n Lorem Ipsum\n\n; width: 6; color: #eee; align: left; anchor: center; side: double; zOffset: 0.01" position="0 2 -11"></a-entity>
+
+-->
+</a-entity>
+
+
+<a-entity gltf-model="scene.gltf" position="-1.7235 4.24784 -11.74708" scale="0.03 0.03 0.03" rotation="0 0 -90" visible=""></a-entity>
+<a-entity gltf-model="scene.gltf" position="-6.51471 4.24784 -11.74708" scale="0.03 0.03 0.03" rotation="0 0 -90" visible=""></a-entity>
+<a-entity gltf-model="scene.gltf" position="2.7235 4.24784 -11.74708" scale="0.03 0.03 0.03" rotation="0 0 -90" visible=""></a-entity>
+
+
+<a-entity gltf-model="scene.gltf" position="7.44369 4.24784 -6.69136" scale="0.03 0.03 0.03" rotation="0 90 -90" visible=""></a-entity>
+
+<a-entity id="rig" movement-controls="speed: 0.15; constrainToNavMesh: true;">
+  <a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0">
+
+    <a-cursor></a-cursor>
+  </a-entity>
+</a-entity>
+
+<!-- <a-entity>
+  <a-image src="#autoJD" material="" geometry="" scale="3 3 1" position="3.884 4.225 -11.698" 
+  event-set__down="_event: mousedown; link:href: http://google.com;"
+  event-set__up="_event: mouseup; material.wireframe: false"
+             event-set__leave="_event: mouseleave; material.wireframe: false"></a-image>
+</a-entity> 
+
+
+<a-entity link="href: test2.html; title: My Homepage; image: #autoJD" scale="3 3 1" position="3.884 4.225 -11.698"></a-entity>
+
+<a-link href="test2.html" title="a" image="#autoJD" scale="3 3 1" position="1.884 1.225 -5.698"></a-link>
+-->
+
+
+
+
+             
+<!-- STAGE -->
+<a-entity>
+
+
+ 
+
+ 
+  <a-plane  src="#ground" normal-map="#groundN" repeat="20 20" material="color:#ffffff;" rotation="-90 0 0" scale="50 50 1" position="0 0.7 0" geometry=""></a-plane> 
+  
+  
+  
+  
+  
+  
+  <!-- <a-grid position="0 5 0" material="side: double;"></a-grid> -->
+  <!-- <a-plane  src="#techo" normal-map="#techoN" repeat="20 20" material="color:#ffffff;" rotation="-90 180 0" scale="50 50 1" position="0 4 0" geometry=""></a-plane>  <a-grid position="0 5 0" material="side: double;"></a-grid> -->
+
+ 
+  <!-- <a-plane material="src:[object HTMLImageElement]" undefined"="" rotation="-90 0 0" scale="50 50 1" position="0 0.7 0" geometry=""></a-plane> 
+  <a-plane  material="repeat:49.99 1.06;color:#ffffff;src:wodeen.jpg" repeat="undefined" rotation="-90 0 0" scale="50 50 1" position="0 0.7 0" geometry=""></a-plane>-->
+  
+</a-entity>
+
+    </a-scene>
+
+
+
+  </body>
+</html>
