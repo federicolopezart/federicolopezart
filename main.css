@@ -96,3 +96,52 @@ a:hover {
 	font-size: 1.1em;
 	transition: 0.5s;
 }
+
+#content {
+	
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		/* grid-template-rows: 1fr 1fr 1fr; */
+		column-gap: 0;
+		row-gap: 0;
+
+		font-family: 'Roboto Condensed', sans-serif;
+		text-align: center;
+		align-content: center;
+		width: 100%;
+		height: 100vh;
+		color: white;
+
+	
+}
+
+#firma {
+	background: url(https://ww3.aauw.org/files/2013/02/Taking-Notes-600x320.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-color: yellowgreen;
+	height: 100vh;
+	vertical-align: center;
+
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+
+#gallery {
+	background-color: turquoise;
+	height: 100vh;
+	vertical-align: center;
+
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
