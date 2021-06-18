@@ -106,7 +106,7 @@ a:hover {
 top: 0;
 
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr;
 
 		 grid-template-rows: 1fr;
          grid-column-start: auto;
@@ -139,8 +139,8 @@ background-color: black;
 	transition: 0.2s;
 	filter: saturate(10%);
 	background-color: yellowgreen;
-	width: 50vw;
-    height: 100vh;
+	width: 100vw;
+    height: 50vh;
 	vertical-align: center !important;
 	color: black;
 
@@ -177,8 +177,8 @@ background-color: black;
 	filter: saturate(10%);
 	color: white;
 	background-color: turquoise;
-	width: 50vw;
-    height: 100vh;
+	width: 100vw;
+    height: 50vh;
 	vertical-align: center!important;
 
 	display: flex;
